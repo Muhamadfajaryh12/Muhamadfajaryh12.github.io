@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        img{
+            padding: 15px;
+            height: 150px;
+        }
+        .card{
+          width: 300px;
+          height: 400px;
+          margin-top: 100px;
+          backdrop-filter: blur(14px);
+          background-color:#1e1e26;
+	        border-radius: 10px;
+	        box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
+        }
+        body{
+          background-color:#a4152c;
+        }
+        #myBtn{
+          border-radius: 5px;
+          border: none;
+          margin-top: 50px;
+          width: 100px;
+        }
+        .card:hover{
+          transition:0.8s;
+          width: 400px;
+          height: 500px;
+          margin-bottom: 100px;
+        }
+        #more {
+          display: none;}
+        
+        .navbar-toggler-icon{
+        background-color: white;
+    }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light fw-bold" href="#"><h2>MARVEL</h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active text-light "  href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="index.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-bold" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="contact.html">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container text-center align-items-center">
+  <div class="card mx-auto">
+    <div class="text-center">
+      <div class="header fw-bold text-light" style="margin-top:15px;">
+       DEVELOPER
+      </div>
+    </div>
+      <img src="img/marvel.png" class= "mx-auto d-block" alt="">
+        <div class="card-body text-light">
+          <p class="text-center fw-bold">Muhamad Fajar Yudhistira Herjanto</p>
+          <p><span id="dots"></span><span id="more">Halo, Nama Saya Muhamad Fajar Yudhistira Herjanto saya yang membuat Website ini alasan saya menggunakan tema ini saya rasa ini merupakan tema yang menarik </span></p>
+          <button onclick="myFunction()" id="myBtn">Read more</button>
+        </div>
+    </div>
+</div>
+<script>
+      function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
